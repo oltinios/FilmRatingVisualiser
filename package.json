@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "node-style-text": "^2.1.2"
+  },
+  "scripts": {
+  "dev": "vite",
+  "build": "vite build",
+  "preview": "vite preview"
+}
+}
