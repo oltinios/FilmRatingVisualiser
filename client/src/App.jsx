@@ -1,9 +1,11 @@
 // client/src/App.jsx
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import SpiderChart from "./SpiderChart.jsx";
 
 export default function App() {
+  const [text, setText] = useState("");
+  
   const sampleData = {
     Action: 0.8,
     Comedy: 0.6,
@@ -18,6 +20,17 @@ export default function App() {
       <h1>Movie Taste Visualiser</h1>
       <SpiderChart data={sampleData} />
       <p>Hover over the points to see values!</p>
+      <div className="textbox-container">
+        
+        <input
+          id="notes"
+          type="text"
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+          placeholder="Type here..."
+          className="notes-input"
+        />
+      </div>
     </div>
   );
 }
