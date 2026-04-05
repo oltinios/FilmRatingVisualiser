@@ -16,10 +16,7 @@ export default function MovieInput() {
     const fetchMovies = async () => {
       try {
         const res = await fetch(
-          `https://api.themoviedb.org/3/search/movie?query=${encodeURIComponent(query)}`,
-          {
-            headers: { Authorization: `Bearer ${token}` },
-          }
+            `http://localhost:5000/search/movie?query=${encodeURIComponent(query)}`
         );
         const data = await res.json();
         setDropdown(data.results.slice(0, 5)); 
@@ -32,7 +29,7 @@ export default function MovieInput() {
   }, [query, token]);
 
   const handleSelect = (movie) => {
-    alert(`You selected: ${movie.title} (${movie.release_date?.slice(0, 4)})`);
+    alert(`You selected: ${movie.title} (${movie.release_date?.slice(0,5)})`);
     setQuery("");
     setDropdown([]);
   };
