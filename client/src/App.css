@@ -1,3 +1,8 @@
+.app-container {
+  text-align: center;
+  padding: 20px;
+}
+
 .textbox-container {
     margin-top: 20px;
 }
@@ -13,6 +18,11 @@
   font-size: 16px;
   border-radius: 4px;
   border: 1px solid #ccc;
+}
+
+.notes-output {
+  margin-top: 10px;
+  font-style: italic;
 }
 
 h1 {

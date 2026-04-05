@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import SpiderChart from "./SpiderChart.jsx";
+import MovieInput from "./MovieInput.jsx";
 
 export default function App() {
   const [text, setText] = useState("");
@@ -16,12 +17,13 @@ export default function App() {
   };
 
   return (
-    <div style={{ textAlign: "center", padding: "20px" }}>
+    <div className="app-container">
       <h1>Movie Taste Visualiser</h1>
       <SpiderChart data={sampleData} />
       <p>Hover over the points to see values!</p>
+      <h1 style={{ textAlign: "center" }}>Movie Search Dropdown</h1>
+      <MovieInput />
       <div className="textbox-container">
-        
         <input
           id="notes"
           type="text"
