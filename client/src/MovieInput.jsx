@@ -4,7 +4,6 @@ export default function MovieInput() {
   const [query, setQuery] = useState("");
   const [dropdown, setDropdown] = useState([]);
 
-  // Use your token from .env (VITE_ prefix is required for Vite)
   const token = import.meta.env.VITE_TMDB_TOKEN;
 
   useEffect(() => {
@@ -35,7 +34,7 @@ export default function MovieInput() {
   };
 
   return (
-    <div style={{ position: "relative", width: "250px", margin: "20px auto" }}>
+    <div style={{display: "flex", alignItems: "center", justifyContent:"center", width: "500px", maxWidth: "90vw", margin: "0 auto"}}>
       <input
         type="text"
         placeholder="Type a movie..."
@@ -53,7 +52,7 @@ export default function MovieInput() {
             background: "#fff",
             position: "absolute",
             top: "38px",
-            width: "100%",
+            width: "500px",
             zIndex: 10,
           }}
         >

@@ -1,7 +1,6 @@
-// index.js
 import express from "express";
 import cors from "cors";
-import fetch from "node-fetch"; // or remove if Node 18+ (fetch is built-in)
+import fetch from "node-fetch"; 
 import dotenv from "dotenv";
 
 dotenv.config();
@@ -18,7 +17,6 @@ app.get("/search/movie", async (req, res) => {
   if (!query) return res.status(400).json({ error: "Query required" });
 
   try {
-    // Use v3 API key in query param
     const url = `https://api.themoviedb.org/3/search/movie?query=${encodeURIComponent(query
     )}&api_key=${process.env.TMDB_API_KEY}`;
 
